@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>d3.csv() vs. d3.text()</title>
+    <link rel="stylesheet" href="dist/css/zenburn.css">
+    <link rel="stylesheet" href="dist/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1 class="mt-4 mb-5">When to use D3.csv() and D3.text()</h1>
+    <div class="row">
+        <div class="col-sm-12 col-md-4">
+            <h2>d3.csv() with header</h2>
+            <div class="good">&#x2713;</div>
+            <p>Result as expected</p>
+            <code class="hljs javascript">data = [</code>
+            <ul id="default"></ul>
+            <code>]<span class="semicolon">;</span></code>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <h2>d3.csv() without header</h2>
+            <div class="bad">&#x2717;</div>
+            <p>First row turns into header</p>
+            <code class="hljs javascript">data = [</code>
+            <ul id="wrong"></ul>
+            <code>]<span class="semicolon">;</span></code>
+        </div>
+        <div class="col-sm-12 col-md-4 justify-content-sm-center">
+            <h2>d3.text() alternative</h2>
+            <div class="good">&#x2713;</div>
+            <p>Fixed the problem</p>
+            <code class="hljs javascript">data = [</code>
+            <ul id="alternative"></ul>
+            <code class="hljs javascript">]<span class="semicolon">;</span></code>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="dist/js/d3.min.js"></script>
+<script type="text/javascript" src="dist/js/highlight.pack.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
